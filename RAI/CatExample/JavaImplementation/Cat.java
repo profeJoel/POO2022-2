@@ -1,11 +1,11 @@
-class Cat{
+public class Cat{
     //Atributos
-    String name;
-    String sex;
-    int age;
-    int weight;
-    String color;
-    String textura;
+    private String name;
+    private String sex;
+    private int age;
+    private int weight;
+    private String color;
+    private String textura;
 
     //Métodos
     public Cat(String nombre, String sex, int age, int weight, String color, String textura){
@@ -17,7 +17,32 @@ class Cat{
         this.textura = textura;
     }
 
-    void meow(){
+    public String getName(){
+        return this.name;
+    }
+
+    public String getColor(){
+        return this.color;
+    }
+
+    public void setColor(String nuevoColor){
+        String[] coloresValidos = {"blanco","marron","naranja","negro","gris"};
+        if(colorEsValido(coloresValidos, nuevoColor)){
+            this.color = nuevoColor;
+        }
+    }
+
+    private boolean colorEsValido(String[] colores, String nuevoColor){
+        for(String color:colores){
+            System.out.println("color: " +color+ " y nuevoColor: " + nuevoColor);
+            if(color.compareTo(nuevoColor)==0){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void meow(){
         System.out.println(this.name + " hace MEOWWWW!!!");
     }
 }
