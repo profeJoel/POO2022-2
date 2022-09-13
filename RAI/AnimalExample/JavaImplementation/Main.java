@@ -9,10 +9,15 @@ public class Main{
         peluza.ronrronea();
         peluza.makeSound();
         System.out.println(peluza.toString());
+        System.out.println(peluza);
 
         Dog rocky = new Dog("Rocky", "Perro", "Chiguagua", 20, "marron");
         rocky.muerde();
+        rocky.makeSound();
+        rocky.eat();
+        rocky.eat("carne");
         System.out.println(rocky.toString());
+        System.out.println(rocky);
 
     }
 }

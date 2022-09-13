@@ -13,4 +13,8 @@ public class Cat extends Animal{
     public void ronrronea(){
         System.out.println("El gato " + this.name + "hace purrrrrrrrrrrrr...");
     }
+
+    public void makeSound(){
+        System.out.println("El gato " + this.name + " hace miauuuu...");
+    }
 }
