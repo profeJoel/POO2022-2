@@ -89,7 +89,7 @@ public class Main{
                 if(artistName.contains(";")){
                     String[] autores = artistName.split(";");
                     for(String author : autores){
-                        artistaAuxiliar = validarArtista(new Artist(artistID, artistName), artistas);
+                        artistaAuxiliar = validarArtista(new Artist(artistID, author), artistas);
                         cancionAuxiliar.addAuthor(artistaAuxiliar);
                         albumAuxiliar.addAuthor(artistaAuxiliar);
                     }

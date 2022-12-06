@@ -15,6 +15,9 @@ public class Artist{
         return this.name;
     }
 
+    public String toString(){
+        return "Artista: " + this.name + "(" + this.ID + ")";
+    }
     @Override
     public boolean equals(Object o){
         // Compara con el objeto o con una instancia
